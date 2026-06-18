@@ -7,39 +7,48 @@ namespace MyWebApiApp.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class MenuController : ControllerBase
+public class OrdersController : ControllerBase
 {
-    private readonly Menu menu = DbMethod.GetMenu();
+    public readonly Orders orders = DbMethod.GetOrders();
 
-    // GET: api/menu/categories
-    [HttpGet("categories")]
-    public ActionResult<Menu> GetCategories()
+    // POST: api/order/newOrder
+    [HttpPost]
+    public ActionResult<Product> AddProduct(Order order)
     {
-        return Ok(menu.Category);
+        orders.orders.Add(order);
+        
+        return CreatedAtAction(nameof(order), new { id = order.OrderId }, order);
     }
 
-    // GET: api/menu/products
+    // GET: api/order/orders
+    [HttpGet]
+    public ActionResult<Orders> GetOrders()
+    {
+        return Ok(orders.orders);
+    }
+/*
+    // GET: api/products
     [HttpGet("products")]
     public ActionResult<Menu> GetProducts()
     {
         return Ok(menu.Products);
     }
 
-    // GET: api/menu/combos
+    // GET: api/combos
     [HttpGet("combos")]
     public ActionResult<Menu> GetCombos()
     {
         return Ok(menu.Combos);
     }
 
-    // GET: api/menu/paymentMethods
+    // GET: api/paymentMethods
     [HttpGet("paymentMethods")]
     public ActionResult<Menu> GetPaymentMethods()
     {
         return Ok(menu.PaymentMethods);
     }
 
-    // GET: api/menu/products/1
+    // GET: api/products/1
     [HttpGet("products/{id}")]
     public ActionResult<Product> GetProduct(int id)
     {
@@ -49,7 +58,7 @@ public class MenuController : ControllerBase
         return Ok(product);
     }
 
-    // GET: api/menu/combos/1
+    // GET: api/combos/1
     [HttpGet("combos/{id}")]
     public ActionResult<Product> GetCombo(int id)
     {
@@ -59,7 +68,7 @@ public class MenuController : ControllerBase
         return Ok(product);
     }
 
-    /*// POST: api/products
+    // POST: api/products
     [HttpPost]
     public ActionResult<Product> AddProduct(Product product)
     {

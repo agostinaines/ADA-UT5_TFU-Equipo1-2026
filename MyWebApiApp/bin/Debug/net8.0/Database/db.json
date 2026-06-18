@@ -1,4 +1,7 @@
 {
+    "test": [
+        {"hi": "hi"}
+    ],
     "categories": [
         {
             "categoryId": 1,
