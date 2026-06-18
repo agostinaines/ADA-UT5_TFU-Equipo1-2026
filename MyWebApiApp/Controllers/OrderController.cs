@@ -9,8 +9,8 @@ namespace MyWebApiApp.Controllers;
 public class OrdersController : ControllerBase
 {
     // POST: api/orders
-    [HttpPost]
-    public ActionResult<Order> AddOrder(Order order)
+    [HttpPost("newOrder")]
+    public ActionResult<Order> AddOrder([FromBody] Order order)
     {
         var currentOrders = DbMethod.GetOrders();
         currentOrders.orders.Add(order);

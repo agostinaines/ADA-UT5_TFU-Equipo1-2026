@@ -15,6 +15,18 @@
           "Quantity": 1
         }
       ]
+    },
+    {
+      "OrderId": 2,
+      "ClientName": "Maria",
+      "TotalPrice": 200.0,
+      "PaymentMethodId": 3,
+      "Items": [
+        {
+          "ItemId": 2,
+          "Quantity": 2
+        }
+      ]
     }
   ]
 }

@@ -472,19 +472,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Estudiantes UCU\\.nuget\\packages\\": {}
+    "C:\\Users\\Estudiante UCU\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Estudiantes UCU\\Documents\\ADA-UT5_TFU-Equipo1-2026\\MyWebApiApp\\MyWebApiApp.csproj",
+      "projectUniqueName": "C:\\Users\\Estudiante UCU\\Documents\\ANDIS\\UT5\\UT5_TFU_Equipo1\\ADA-UT5_TFU-Equipo1-2026\\MyWebApiApp\\MyWebApiApp.csproj",
       "projectName": "MyWebApiApp",
-      "projectPath": "C:\\Users\\Estudiantes UCU\\Documents\\ADA-UT5_TFU-Equipo1-2026\\MyWebApiApp\\MyWebApiApp.csproj",
-      "packagesPath": "C:\\Users\\Estudiantes UCU\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Estudiantes UCU\\Documents\\ADA-UT5_TFU-Equipo1-2026\\MyWebApiApp\\obj\\",
+      "projectPath": "C:\\Users\\Estudiante UCU\\Documents\\ANDIS\\UT5\\UT5_TFU_Equipo1\\ADA-UT5_TFU-Equipo1-2026\\MyWebApiApp\\MyWebApiApp.csproj",
+      "packagesPath": "C:\\Users\\Estudiante UCU\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Estudiante UCU\\Documents\\ANDIS\\UT5\\UT5_TFU_Equipo1\\ADA-UT5_TFU-Equipo1-2026\\MyWebApiApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Estudiantes UCU\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Estudiante UCU\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
