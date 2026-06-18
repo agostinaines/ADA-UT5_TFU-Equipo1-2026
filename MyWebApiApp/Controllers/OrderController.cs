@@ -48,8 +48,8 @@ public class OrdersController : ControllerBase
         if (orderIndex < 0)
             return NotFound();
 
+        DeleteOrder(id);
         currentOrders.orders[orderIndex] = updatedOrder;
-
         DbMethod.UpdateOrdersFile(currentOrders);
 
         return Ok(updatedOrder);
@@ -69,53 +69,23 @@ public class OrdersController : ControllerBase
 
         return NoContent();
     }
-/*
-    // GET: api/products
-    [HttpGet("products")]
-    public ActionResult<Menu> GetProducts()
+
+    // GET: api/payments
+    [HttpGet("payments")]
+    public ActionResult<Payment> GetPayments()
     {
-        return Ok(menu.Products);
+        var currentPayments = DbMethod.GetPayments();
+        return Ok(currentPayments.AllPayments);
     }
 
-    // GET: api/combos
-    [HttpGet("combos")]
-    public ActionResult<Menu> GetCombos()
+    // POST: api/orders/pay
+    [HttpPost("pay")]
+    public IActionResult PayOrder(Payment payment)
     {
-        return Ok(menu.Combos);
-    }
+        var currentPayments = DbMethod.GetPayments();
+        currentPayments.AllPayments.Add(payment);
+        DbMethod.UpdatePaymentsFile(currentPayments);
 
-    // GET: api/paymentMethods
-    [HttpGet("paymentMethods")]
-    public ActionResult<Menu> GetPaymentMethods()
-    {
-        return Ok(menu.PaymentMethods);
+        return CreatedAtAction(nameof(PayOrder), new { id = payment.OrderId }, payment);
     }
-
-    // GET: api/products/1
-    [HttpGet("products/{id}")]
-    public ActionResult<Product> GetProduct(int id)
-    {
-        var product = menu.Products.Find(p => p.ProductId == id);
-        if (product == null)
-            return NotFound();
-        return Ok(product);
-    }
-
-    // GET: api/combos/1
-    [HttpGet("combos/{id}")]
-    public ActionResult<Product> GetCombo(int id)
-    {
-        var product = menu.Combos.Find(c => c.ComboId == id);
-        if (product == null)
-            return NotFound();
-        return Ok(product);
-    }
-
-    // POST: api/products
-    [HttpPost]
-    public ActionResult<Product> AddProduct(Product product)
-    {
-        menu.menu.Add(product);
-        return CreatedAtAction(nameof(GetProduct), new { id = product.ProductId }, product);
-    }*/
 }
