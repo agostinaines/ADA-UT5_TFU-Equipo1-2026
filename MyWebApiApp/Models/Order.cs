@@ -11,5 +11,11 @@ public class Order
     public string ClientName { get; set; }
     public decimal TotalPrice { get; set; }
     public int PaymentMethodId { get; set; }
-    public List<Item> Items { get; set; }
+    public List<OrderItem> Items { get; set; }
+}
+
+public class OrderItem
+{
+    public int ItemId { get; set; }
+    public int Quantity { get; set; }
 }

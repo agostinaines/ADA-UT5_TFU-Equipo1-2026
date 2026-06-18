@@ -1,20 +1,20 @@
 {
-    "orders": [
+  "orders": [
+    {
+      "OrderId": 1,
+      "ClientName": "José",
+      "TotalPrice": 250.0,
+      "PaymentMethodId": 3,
+      "Items": [
         {
-            "orderId": 1,
-            "clientName": "José",
-            "totalPrice": 250,
-            "paymentMethodId": 3, 
-            "items": [
-                {
-                    "itemId": 1,
-                    "quantity": 2
-                },
-                {
-                    "itemId": 4,
-                    "quantity": 1
-                }
-            ]
+          "ItemId": 1,
+          "Quantity": 2
+        },
+        {
+          "ItemId": 4,
+          "Quantity": 1
         }
-    ]
+      ]
+    }
+  ]
 }

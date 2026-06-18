@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MyWebApiApp.Models;
 using MyWebApiApp.Database;
-using Microsoft.VisualBasic;
 
 namespace MyWebApiApp.Controllers;
 
@@ -9,22 +8,66 @@ namespace MyWebApiApp.Controllers;
 [ApiController]
 public class OrdersController : ControllerBase
 {
-    public readonly Orders orders = DbMethod.GetOrders();
-
-    // POST: api/order/newOrder
+    // POST: api/orders
     [HttpPost]
-    public ActionResult<Product> AddProduct(Order order)
+    public ActionResult<Order> AddOrder(Order order)
     {
-        orders.orders.Add(order);
-        
-        return CreatedAtAction(nameof(order), new { id = order.OrderId }, order);
+        var currentOrders = DbMethod.GetOrders();
+        currentOrders.orders.Add(order);
+        DbMethod.PostNewOrder(currentOrders);
+
+        return CreatedAtAction(nameof(GetOrder), new { id = order.OrderId }, order);
     }
 
-    // GET: api/order/orders
+    // GET: api/orders
     [HttpGet]
     public ActionResult<Orders> GetOrders()
     {
-        return Ok(orders.orders);
+        var currentOrders = DbMethod.GetOrders();
+        return Ok(currentOrders.orders);
+    }
+
+    // GET: api/orders/1
+    [HttpGet("{id}")]
+    public ActionResult<Order> GetOrder(int id)
+    {
+        var currentOrders = DbMethod.GetOrders();
+        var order = currentOrders.orders.Find(o => o.OrderId == id);
+        if (order == null)
+            return NotFound();
+
+        return Ok(order);
+    }
+
+    // PUT: api/orders/1
+    [HttpPut("{id}")]
+    public ActionResult<Order> UpdateOrder(int id, Order updatedOrder)
+    {
+        var currentOrders = DbMethod.GetOrders();
+        var orderIndex = currentOrders.orders.FindIndex(o => o.OrderId == id);
+        if (orderIndex < 0)
+            return NotFound();
+
+        currentOrders.orders[orderIndex] = updatedOrder;
+
+        DbMethod.UpdateOrdersFile(currentOrders);
+
+        return Ok(updatedOrder);
+    }
+
+    // DELETE: api/orders/1
+    [HttpDelete("{id}")]
+    public IActionResult DeleteOrder(int id)
+    {
+        var currentOrders = DbMethod.GetOrders();
+        var orderIndex = currentOrders.orders.FindIndex(o => o.OrderId == id);
+        if (orderIndex < 0)
+            return NotFound();
+
+        currentOrders.orders.RemoveAt(orderIndex);
+        DbMethod.UpdateOrdersFile(currentOrders);
+
+        return NoContent();
     }
 /*
     // GET: api/products

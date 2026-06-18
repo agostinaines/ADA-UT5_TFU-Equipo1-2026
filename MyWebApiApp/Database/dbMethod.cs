@@ -22,7 +22,12 @@ public static class DbMethod
 
     public static void PostNewOrder(Orders orders)
     {
-        PopulateNewOrder(orders);
+        SaveOrders(orders);
+    }
+
+    public static void UpdateOrdersFile(Orders orders)
+    {
+        SaveOrders(orders);
     }
 
     static void PopulateMenuData()
@@ -47,13 +52,13 @@ public static class DbMethod
         orders = JsonConvert.DeserializeObject<Orders>(json);
     }
 
-    static void PopulateNewOrder(Orders orders)
+    static void SaveOrders(Orders orders)
     {
         string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
         string filePath = Path.Combine(currentDirectory, "Database/orders.json");
 
-        string ordersToString = orders.ToString();
+        string ordersToString = JsonConvert.SerializeObject(orders, Formatting.Indented);
 
         File.WriteAllText(filePath, ordersToString);
     }
