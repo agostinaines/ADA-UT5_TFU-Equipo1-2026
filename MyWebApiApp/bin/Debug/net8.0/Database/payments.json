@@ -9,6 +9,16 @@
       "OrderId": 2,
       "MontoTotal": 500,
       "PaymentMethodId": 3
+    },
+    {
+      "OrderId": 1,
+      "MontoTotal": 500,
+      "PaymentMethodId": 3
+    },
+    {
+      "OrderId": 2,
+      "MontoTotal": 500,
+      "PaymentMethodId": 3
     }
   ]
 }

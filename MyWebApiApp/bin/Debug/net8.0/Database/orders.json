@@ -15,12 +15,12 @@
     {
       "OrderId": 3,
       "ClientName": "Maria",
-      "TotalPrice": 500.0,
+      "TotalPrice": 200.0,
       "PaymentMethodId": 3,
       "Items": [
         {
           "ItemId": 2,
-          "Quantity": 1
+          "Quantity": 2
         }
       ]
     }
