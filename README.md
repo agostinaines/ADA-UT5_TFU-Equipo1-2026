@@ -2,10 +2,11 @@
 
 ## Instalación
 
-Instalar la dependencia:
+Instalar las dependencias:
 
 ```bash
 dotnet add package Newtonsoft.Json
+npm install -g newman newman-reporter-htmlextra
 ```
 
 ## Correr la aplicación
