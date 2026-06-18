@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using MyWebApiApp.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MyWebApiApp.Database;
 
@@ -7,6 +8,7 @@ public static class DbMethod
 {
     private static Menu menu;
     private static Orders orders;
+    private static Payments payments; 
 
     public static Menu GetMenu()
     {
@@ -28,6 +30,17 @@ public static class DbMethod
     public static void UpdateOrdersFile(Orders orders)
     {
         SaveOrders(orders);
+    }
+
+    public static Payments GetPayments()
+    {
+        PopulatePaymentsData();
+        return payments;
+    }
+
+    public static void UpdatePaymentsFile(Payments payments)
+    {
+        PayOrder(payments);
     }
 
     static void PopulateMenuData()
@@ -61,5 +74,28 @@ public static class DbMethod
         string ordersToString = JsonConvert.SerializeObject(orders, Formatting.Indented);
 
         File.WriteAllText(filePath, ordersToString);
+    }
+
+    static void PopulatePaymentsData()
+    {
+        string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        string filePath = Path.Combine(currentDirectory, "Database/payments.json");
+
+        string json = File.ReadAllText(filePath);
+
+        payments = JsonConvert.DeserializeObject<Payments>(json);
+
+        payments ??= new Payments();
+    }
+
+    static void PayOrder(Payments payments)
+    {
+        string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+        string filePath = Path.Combine(currentDirectory, "Database/payments.json");
+
+        string paymentsToString = JsonConvert.SerializeObject(payments, Formatting.Indented);
+
+        File.WriteAllText(filePath, paymentsToString);
     }
 }
