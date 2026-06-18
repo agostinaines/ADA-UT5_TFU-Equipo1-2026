@@ -72,3 +72,4 @@ C:\Users\Estudiantes UCU\Documents\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\obj\Debu
 C:\Users\Estudiantes UCU\Documents\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\obj\Debug\net8.0\MyWebApiApp.pdb
 C:\Users\Estudiantes UCU\Documents\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\obj\Debug\net8.0\MyWebApiApp.genruntimeconfig.cache
 C:\Users\Estudiantes UCU\Documents\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\obj\Debug\net8.0\ref\MyWebApiApp.dll
+C:\Users\Estudiante UCU\Documents\ANDIS\UT5\UT5_TFU_Equipo1\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\bin\Debug\net8.0\postmanCollection\apiCollection.json
