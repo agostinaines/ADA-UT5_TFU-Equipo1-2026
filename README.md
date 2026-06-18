@@ -1,16 +1,14 @@
 # ADA-UT5_TFU-Equipo1-2026
 
-## Installation
+## Instalación
 
-Install the required dependency:
+Instalar la dependencia:
 
 ```bash
 dotnet add package Newtonsoft.Json
 ```
 
-## Run the Application
-
-Navigate to the project directory and start the application:
+## Correr la aplicación
 
 ```bash
 cd MyWebApiApp
