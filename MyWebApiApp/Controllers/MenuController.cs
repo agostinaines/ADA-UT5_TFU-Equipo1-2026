@@ -49,6 +49,23 @@ public class MenuController : ControllerBase
         return Ok(product);
     }
 
+    // GET: api/menu/products/category/1
+    [HttpGet("products/category/{categoryId}")]
+    public ActionResult<Product> GetProductByCategory(int categoryId)
+    {
+        var productsByCategory = new List<Product>();
+
+        foreach (var product in menu.Products)
+        {
+            if (product.CategoryId == categoryId)
+            {
+                productsByCategory.Add(product);
+            }
+        }
+
+        return Ok(productsByCategory);
+    }
+
     // GET: api/menu/combos/1
     [HttpGet("combos/{id}")]
     public ActionResult<Product> GetCombo(int id)
@@ -58,12 +75,4 @@ public class MenuController : ControllerBase
             return NotFound();
         return Ok(product);
     }
-
-    /*// POST: api/products
-    [HttpPost]
-    public ActionResult<Product> AddProduct(Product product)
-    {
-        menu.menu.Add(product);
-        return CreatedAtAction(nameof(GetProduct), new { id = product.ProductId }, product);
-    }*/
 }

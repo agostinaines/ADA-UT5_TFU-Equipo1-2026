@@ -1,16 +1,8 @@
 {
-    "payment": [
+    "payments": [
         {
-            "id": 1,
-            "name": "Tarjeta"
-        },
-        {
-            "id": 2,
-            "name": "Efectivo"
-        },
-        {
-            "id": 3,
-            "name": "Mercado Pago"
+            "montoTotal": 500,
+            "paymentMethodId": 3
         }
     ]
 }

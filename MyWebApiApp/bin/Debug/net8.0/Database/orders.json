@@ -1,22 +1,6 @@
 {
   "orders": [
     {
-      "OrderId": 1,
-      "ClientName": "José",
-      "TotalPrice": 250.0,
-      "PaymentMethodId": 3,
-      "Items": [
-        {
-          "ItemId": 1,
-          "Quantity": 2
-        },
-        {
-          "ItemId": 4,
-          "Quantity": 1
-        }
-      ]
-    },
-    {
       "OrderId": 2,
       "ClientName": "Maria",
       "TotalPrice": 200.0,
@@ -25,6 +9,18 @@
         {
           "ItemId": 2,
           "Quantity": 2
+        }
+      ]
+    },
+    {
+      "OrderId": 3,
+      "ClientName": "Maria",
+      "TotalPrice": 500.0,
+      "PaymentMethodId": 3,
+      "Items": [
+        {
+          "ItemId": 2,
+          "Quantity": 1
         }
       ]
     }
