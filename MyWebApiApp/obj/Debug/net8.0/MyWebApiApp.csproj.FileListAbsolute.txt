@@ -31,3 +31,7 @@ C:\Users\Estudiante UCU\Documents\ANDIS\UT5\UT5_TFU_Equipo1\ADA-UT5_TFU-Equipo1-
 C:\Users\Estudiante UCU\Documents\ANDIS\UT5\UT5_TFU_Equipo1\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\obj\Debug\net8.0\MyWebApiApp.pdb
 C:\Users\Estudiante UCU\Documents\ANDIS\UT5\UT5_TFU_Equipo1\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\obj\Debug\net8.0\MyWebApiApp.genruntimeconfig.cache
 C:\Users\Estudiante UCU\Documents\ANDIS\UT5\UT5_TFU_Equipo1\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\obj\Debug\net8.0\ref\MyWebApiApp.dll
+C:\Users\Estudiante UCU\Documents\ANDIS\UT5\UT5_TFU_Equipo1\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\bin\Debug\net8.0\Database\payments.json
+C:\Users\Estudiante UCU\Documents\ANDIS\UT5\UT5_TFU_Equipo1\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\bin\Debug\net8.0\Database\products.json
+C:\Users\Estudiante UCU\Documents\ANDIS\UT5\UT5_TFU_Equipo1\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Estudiante UCU\Documents\ANDIS\UT5\UT5_TFU_Equipo1\ADA-UT5_TFU-Equipo1-2026\MyWebApiApp\bin\Debug\net8.0\Database\db.json

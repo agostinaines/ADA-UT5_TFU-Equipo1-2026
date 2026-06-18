@@ -1,0 +1,193 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Hamburguesas",
+      "products": [
+        {
+          "productId": 1,
+          "name": "Hamburguesa de Queso",
+          "price": 100,
+          "ingredients": [
+            {
+              "ingredientId": 1,
+              "name": "Pan",
+              "quantity": 2
+            },
+            {
+              "ingredientId": 2,
+              "name": "Carne",
+              "quantity": 1
+            },
+            {
+              "ingredientId": 3,
+              "name": "Queso",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "productId": 2,
+          "name": "Hamburguesa de Pollo",
+          "price": 100,
+          "ingredients": [
+            {
+              "ingredientId": 1,
+              "name": "Pan",
+              "quantity": 2
+            },
+            {
+              "ingredientId": 4,
+              "name": "Pollo",
+              "quantity": 1
+            },
+            {
+              "ingredientId": 3,
+              "name": "Queso",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "productId": 3,
+          "name": "Hamburguesa Vegetariana",
+          "price": 120,
+          "ingredients": [
+            {
+              "ingredientId": 1,
+              "name": "Pan",
+              "quantity": 2
+            },
+            {
+              "ingredientId": 5,
+              "name": "Hamburguesa de Seitan",
+              "quantity": 1
+            },
+            {
+              "ingredientId": 3,
+              "name": "Queso",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bebidas",
+      "products": [
+        {
+          "productId": 4,
+          "name": "Coca Cola",
+          "price": 50,
+          "ingredients": [
+            {
+              "ingredientId": 6,
+              "name": "Coca Cola",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "productId": 5,
+          "name": "Pomelo",
+          "price": 50,
+          "ingredients": [
+            {
+              "ingredientId": 7,
+              "name": "Pomelo",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "guarniciones",
+      "products": [
+        {
+          "productId": 6,
+          "name": "Papas Fritas",
+          "price": 50,
+          "ingredients": [
+            {
+              "ingredientId": 8,
+              "name": "Papa",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "productId": 7,
+          "name": "Papas con Cheddar",
+          "price": 75,
+          "ingredients": [
+            {
+              "ingredientId": 8,
+              "name": "Papa",
+              "quantity": 1
+            },
+            {
+              "ingredientId": 9,
+              "name": "Cheddar",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "combos",
+      "products": [
+        {
+          "productId": 8,
+          "name": "Combo Clasico",
+          "price": 200,
+          "items": [
+            {
+              "productId": 1,
+              "quantity": 1
+            },
+            {
+              "productId": 6,
+              "quantity": 1
+            },
+            {
+              "productId": 4,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "productId": 9,
+          "name": "Combo Duo",
+          "price": 300,
+          "items": [
+            {
+              "productId": 1,
+              "quantity": 1
+            },
+            {
+              "productId": 2,
+              "quantity": 1
+            },
+            {
+              "productId": 7,
+              "quantity": 2
+            },
+            {
+              "productId": 4,
+              "quantity": 1
+            },
+            {
+              "productId": 5,
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,43 +3,24 @@ using MyWebApiApp.Models;
 
 namespace MyWebApiApp.Database;
 
-public class DbMethod
+public static class DbMethod
 {
-    private List<Product> products;
-    private List<PaymentMethod> paymentMethods;
+    private static Menu products;
 
-    public List<Product> GetProducts()
+    public static Menu GetMenu()
     {
         PopulateProductsData();
         return products;
     }
 
-    public List<PaymentMethod> GetPaymentMethod()
-    {
-        PopulatePaymentsData();
-        return paymentMethods;
-    }
-
-    void PopulateProductsData()
+    static void PopulateProductsData()
     {
         string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
-        string filePath = Path.Combine(currentDirectory, "products.json");
+        string filePath = Path.Combine(currentDirectory, "Database/db.json");
 
         string json = File.ReadAllText(filePath);
 
-        products = JsonConvert.DeserializeObject<List<Product>>(json);
+        products = JsonConvert.DeserializeObject<Menu>(json);
     }
-
-    void PopulatePaymentsData()
-    {
-        string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
-
-        string filePath = Path.Combine(currentDirectory, "payments.json");
-
-        string json = File.ReadAllText(filePath);
-
-        paymentMethods = JsonConvert.DeserializeObject<List<PaymentMethod>>(json);
-    }
-    
 }
